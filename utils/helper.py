@@ -23,10 +23,10 @@ def scaled_data(df):
 
     train_df = df[:train_size]
 
-    with open("../models/scaler/feature_scaler.pkl", "rb") as f:
+    with open("../../models/scaler/feature_scaler.pkl", "rb") as f:
         feature_scaler = pickle.load(f)
 
-    with open("../models/scaler/target_scaler.pkl", "rb") as f:
+    with open("../../models/scaler/target_scaler.pkl", "rb") as f:
         target_scaler = pickle.load(f)
 
     df[features] = feature_scaler.transform(df[features])
